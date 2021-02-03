@@ -1,10 +1,12 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <div class="flex justify-center">
+    <img alt="Vue logo" src="./assets/logo.png" />
+  </div>
   <HelloWorld msg="Hello Vue 3 + Vite" />
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <style>
