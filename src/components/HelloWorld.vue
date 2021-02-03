@@ -2,11 +2,19 @@
   <h1>{{ msg }}</h1>
 
   <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank"
+    <a
+      class="border-b-2 border-red-500"
+      href="https://vitejs.dev/guide/features.html"
+      target="_blank"
       >Vite Documentation</a
     >
     |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
+    <a
+      class="border-b-2 border-blue-500"
+      href="https://v3.vuejs.org/"
+      target="_blank"
+      >Vue 3 Documentation</a
+    >
   </p>
 
   <button @click="state.count++">count is: {{ state.count }}</button>
