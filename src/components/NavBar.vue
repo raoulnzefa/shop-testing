@@ -66,6 +66,7 @@
                 class="flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 id="user-menu"
                 aria-haspopup="true"
+                @click="buttonClick"
               >
                 <span class="sr-only">Open user menu</span>
                 <svg
@@ -87,6 +88,7 @@
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="user-menu"
+              v-if="isOpen"
             >
               <a
                 href="#"
