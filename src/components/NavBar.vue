@@ -66,7 +66,7 @@
                 class="flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 id="user-menu"
                 aria-haspopup="true"
-                @click="buttonClick"
+                @click="isOpen = !isOpen"
               >
                 <span class="sr-only">Open user menu</span>
                 <svg
@@ -88,7 +88,7 @@
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="user-menu"
-              v-if="isOpen"
+              v-show="isOpen"
             >
               <a
                 href="#"
@@ -118,4 +118,14 @@
 
 <script setup>
 import HomeSvg from "./HomeSvg.vue";
+</script>
+
+<script>
+export default {
+  data: function () {
+    return {
+      isOpen: false,
+    };
+  },
+};
 </script>
