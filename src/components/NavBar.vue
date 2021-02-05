@@ -66,7 +66,7 @@
                 class="flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 id="user-menu"
                 aria-haspopup="true"
-                @click="isOpen = !isOpen"
+                @click.prevent="toggleDropdown"
               >
                 <span class="sr-only">Open user menu</span>
                 <svg
@@ -126,6 +126,22 @@ export default {
     return {
       isOpen: false,
     };
+  },
+  methods: {
+    toggleDropdown(e) {
+      this.isOpen = !this.isOpen;
+    },
+    close(e) {
+      if (!this.$el.contains(e.target)) {
+        this.isOpen = false;
+      }
+    },
+  },
+  mounted() {
+    document.addEventListener("click", this.close);
+  },
+  beforeDestroy() {
+    document.removeEventListener("click", this.close);
   },
 };
 </script>
