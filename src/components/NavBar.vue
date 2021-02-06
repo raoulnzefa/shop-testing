@@ -45,7 +45,7 @@
               class="flex p-1 text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
               id="notification-menu"
               aria-haspopup="true"
-              @click.prevent="isNotif = !isNotif"
+              @click.prevent="(isNotif = !isNotif), (isOpen = false)"
             >
               <span class="sr-only">View notifications</span>
               <svg
@@ -97,7 +97,7 @@
               class="flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
               id="user-menu"
               aria-haspopup="true"
-              @click.prevent="isOpen = !isOpen"
+              @click.prevent="(isOpen = !isOpen), (isNotif = false)"
             >
               <span class="sr-only">Open user menu</span>
               <svg
