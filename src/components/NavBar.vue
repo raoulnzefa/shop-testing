@@ -1,10 +1,8 @@
 <template>
   <nav class="bg-gray-900">
-    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
-        <div
-          class="absolute inset-y-0 left-0 flex items-center sm:hidden"
-        ></div>
+        <div class="absolute flex items-center sm:hidden"></div>
         <div
           class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
         >
