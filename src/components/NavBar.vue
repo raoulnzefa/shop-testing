@@ -166,8 +166,8 @@
 </template>
 
 <script setup>
-import HomeSvg from "./HomeSvg.vue";
-import NavLink from "./NavLink.vue";
+import HomeSvg from "./NavBarItems/HomeSvg.vue";
+import NavLink from "./NavBarItems/NavLink.vue";
 </script>
 
 <script>
