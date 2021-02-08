@@ -11,7 +11,9 @@
           <div class="flex items-center flex-shrink-0">
             <HomeSvg classes="block w-auto h-8 text-white fill-current" />
           </div>
-          <NavLink />
+          <div class="hidden sm:flex sm:ml-6">
+            <NavLink />
+          </div>
         </div>
         <div
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
