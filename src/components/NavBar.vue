@@ -9,32 +9,9 @@
           class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
         >
           <div class="flex items-center flex-shrink-0">
-            <HomeSvg
-              classes="block w-auto h-8 text-white fill-current lg:hidden"
-            />
-            <HomeSvg
-              classes="hidden w-auto h-8 text-white fill-current lg:block"
-            />
+            <HomeSvg classes="block w-auto h-8 text-white fill-current" />
           </div>
-          <div class="hidden sm:block sm:ml-6">
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-                >Espace personnel</a
-              >
-              <a
-                href="#"
-                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-                >Commandes</a
-              >
-              <a
-                href="#"
-                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-                >Réductions</a
-              >
-            </div>
-          </div>
+          <NavLink />
         </div>
         <div
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
@@ -190,6 +167,7 @@
 
 <script setup>
 import HomeSvg from "./HomeSvg.vue";
+import NavLink from "./NavLink.vue";
 </script>
 
 <script>
