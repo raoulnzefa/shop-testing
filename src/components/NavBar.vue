@@ -16,7 +16,23 @@
             /></IconBase>
           </div>
           <div class="hidden sm:flex sm:ml-6">
-            <NavLink />
+            <div class="flex">
+              <LinkBase
+                href="#"
+                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                >Espace personnel</LinkBase
+              >
+              <LinkBase
+                href="#"
+                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                >Commandes</LinkBase
+              >
+              <LinkBase
+                href="#"
+                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                >Réductions</LinkBase
+              >
+            </div>
           </div>
         </div>
         <div
@@ -124,23 +140,23 @@
               aria-labelledby="user-menu"
               v-show="isOpen"
             >
-              <a
+              <LinkBase
                 href="#"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 role="menuitem"
-                >Profil</a
+                >Profil</LinkBase
               >
-              <a
+              <LinkBase
                 href="#"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 role="menuitem"
-                >Paramètres</a
+                >Paramètres</LinkBase
               >
-              <a
+              <LinkBase
                 href="#"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 role="menuitem"
-                >Déconnexion</a
+                >Déconnexion</LinkBase
               >
             </div>
           </div>
@@ -151,8 +167,8 @@
 </template>
 
 <script setup>
-import NavLink from "./NavBarItems/NavLink.vue";
-import IconBase from "./NavBarItems/IconBase.vue";
+import IconBase from "./IconBase.vue";
+import LinkBase from "./LinkBase.vue";
 </script>
 
 <script>
