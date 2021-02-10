@@ -7,13 +7,17 @@
           class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
         >
           <div class="flex items-center flex-shrink-0">
-            <IconBase
-              classe="block w-auto h-8 text-white fill-current"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              ><path
-                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
-            /></IconBase>
+            <LinkBase
+              href="#"
+              class="text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+              ><IconBase
+                classe="block w-auto h-8 text-white fill-current"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                ><path
+                  d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+              /></IconBase>
+            </LinkBase>
           </div>
           <div class="hidden sm:flex sm:ml-6">
             <div class="flex">
