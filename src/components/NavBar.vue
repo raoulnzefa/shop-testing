@@ -24,17 +24,17 @@
               <LinkBase
                 href="#"
                 class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-                >Espace personnel</LinkBase
+                >Personal Space</LinkBase
               >
               <LinkBase
                 href="#"
                 class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-                >Commandes</LinkBase
+                >Orders</LinkBase
               >
               <LinkBase
                 href="#"
                 class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-                >Réductions</LinkBase
+                >Discount</LinkBase
               >
             </div>
           </div>
@@ -79,11 +79,9 @@
                   /></IconBase>
                 </div>
                 <div class="ml-2 mr-6 text-sm text-left">
-                  <span class="font-semibold"
-                    >Commande #X100 enregistrée !</span
-                  >
+                  <span class="font-semibold">Order #X100 saved!</span>
                   <span class="block text-gray-500"
-                    >Rendez-vous sur votre espace personnel</span
+                    >Go to your personal space</span
                   >
                 </div>
               </div>
@@ -110,9 +108,9 @@
                   /></IconBase>
                 </div>
                 <div class="ml-2 mr-6 text-sm text-left">
-                  <span class="font-semibold">Erreur commande #X3910</span>
+                  <span class="font-semibold">Error order #X3910</span>
                   <span class="block text-gray-500"
-                    >L'article n'est plus disponible</span
+                    >Item is no longer available</span
                   >
                 </div>
               </div>
@@ -147,19 +145,19 @@
                 href="#"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 role="menuitem"
-                >Profil</LinkBase
+                >Profile</LinkBase
               >
               <LinkBase
                 href="#"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 role="menuitem"
-                >Paramètres</LinkBase
+                >Settings</LinkBase
               >
               <LinkBase
                 href="#"
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                 role="menuitem"
-                >Déconnexion</LinkBase
+                >Logout</LinkBase
               >
             </div>
           </div>
