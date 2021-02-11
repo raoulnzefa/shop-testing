@@ -121,21 +121,20 @@
           <!-- User Menu -->
           <div class="relative ml-3">
             <button
-              class="flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+              class="flex text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
               id="user-menu"
               aria-haspopup="true"
               @click.prevent="(isOpen = !isOpen), (isNotif = false)"
             >
               <span class="sr-only">Open user menu</span>
-              <IconBase
-                classe="w-8 h-8 text-white rounded-full fill-current"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                ><path
-                  fill-rule="evenodd"
-                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                  clip-rule="evenodd"
-              /></IconBase>
+              <IconBase classe="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
+              </IconBase>
             </button>
             <div
               class="absolute right-0 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5"
