@@ -1,14 +1,12 @@
 <template>
   <NavBar />
 
-  <p class="text-center m-7">
-    ------------------- Work in Progress -------------------
-  </p>
-  <p></p>
+  <HomePage />
 </template>
 
 <script setup>
 import NavBar from "./components/NavBar.vue";
+import HomePage from "./components/HomePage.vue";
 </script>
 
 <style>
