@@ -2,38 +2,46 @@
   <nav class="bg-blue-700">
     <div class="sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
-        <div class="absolute flex items-center sm:hidden"></div>
-        <div
-          class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start"
-        >
+        <div class="flex items-center flex-1 sm:items-stretch sm:justify-start">
           <div class="flex items-center flex-shrink-0">
-            <LinkBase
-              href="#"
-              class="text-sm font-medium text-gray-300 rounded-md hover:bg-blue-800 hover:text-white"
-              ><IconBase
-                classe="block w-auto h-8 text-white fill-current"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                ><path
-                  d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
-              /></IconBase>
-            </LinkBase>
+            <div class="block m-1 sm:hidden">
+              <button
+                class="inline-flex items-start justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-expanded="false"
+                @click.prevent="isOpenMenu = !isOpenMenu"
+              >
+                <span class="sr-only">Open main menu</span>
+
+                <IconBase
+                  class="block w-6 h-6"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </IconBase>
+              </button>
+            </div>
           </div>
-          <div class="hidden sm:flex sm:ml-6">
+          <div class="hidden sm:block">
             <div class="flex">
               <LinkBase
                 href="#"
-                class="px-3 py-2 text-sm font-medium text-gray-100 rounded-md hover:bg-blue-800 hover:text-white"
+                class="px-3 py-2 text-sm font-medium text-gray-100 rounded-md hover:bg-blue-600 hover:text-white"
                 >Personal Space</LinkBase
               >
               <LinkBase
                 href="#"
-                class="px-3 py-2 text-sm font-medium text-gray-100 rounded-md hover:bg-blue-800 hover:text-white"
+                class="px-3 py-2 text-sm font-medium text-gray-100 rounded-md hover:bg-blue-600 hover:text-white"
                 >Orders</LinkBase
               >
               <LinkBase
                 href="#"
-                class="px-3 py-2 text-sm font-medium text-gray-100 rounded-md hover:bg-blue-800 hover:text-white"
+                class="px-3 py-2 text-sm font-medium text-gray-100 rounded-md hover:bg-blue-600 hover:text-white"
                 >Discount</LinkBase
               >
             </div>
@@ -45,7 +53,7 @@
           <!-- Notification Menu -->
           <div class="relative ml-3">
             <button
-              class="flex p-1 text-gray-400 bg-blue-900 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-900 focus:ring-white"
+              class="flex p-1 text-gray-400 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-900 focus:ring-white"
               id="notification-menu"
               aria-haspopup="true"
               @click.prevent="(isNotif = !isNotif), (isOpen = false)"
@@ -119,7 +127,7 @@
           <!-- User Menu -->
           <div class="relative ml-3">
             <button
-              class="flex text-gray-400 bg-blue-900 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
+              class="flex text-gray-400 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
               id="user-menu"
               aria-haspopup="true"
               @click.prevent="(isOpen = !isOpen), (isNotif = false)"
@@ -164,6 +172,26 @@
         </div>
       </div>
     </div>
+    <div class="" v-if="isOpenMenu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <LinkBase
+          href="#"
+          class="block px-3 py-2 text-base font-medium text-gray-100 rounded-md hover:bg-blue-600 hover:text-white"
+          >Personal Space</LinkBase
+        >
+        <LinkBase
+          href="#"
+          class="block px-3 py-2 text-base font-medium text-gray-100 rounded-md hover:bg-blue-600 hover:text-white"
+          >Orders</LinkBase
+        >
+        <LinkBase
+          href="#"
+          class="block px-3 py-2 text-base font-medium text-gray-100 rounded-md hover:bg-blue-600 hover:text-white"
+          >Discount</LinkBase
+        >
+      </div>
+    </div>
   </nav>
 </template>
 
@@ -178,6 +206,7 @@ export default {
     return {
       isOpen: false,
       isNotif: false,
+      isOpenMenu: false,
     };
   },
   methods: {
@@ -185,6 +214,7 @@ export default {
       if (!this.$el.contains(e.target)) {
         this.isOpen = false;
         this.isNotif = false;
+        this.isOpenMenu = false;
       }
     },
   },
