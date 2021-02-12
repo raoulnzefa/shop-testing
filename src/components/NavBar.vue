@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-gray-900">
+  <nav class="bg-blue-700">
     <div class="sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute flex items-center sm:hidden"></div>
@@ -9,7 +9,7 @@
           <div class="flex items-center flex-shrink-0">
             <LinkBase
               href="#"
-              class="text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+              class="text-sm font-medium text-gray-300 rounded-md hover:bg-blue-800 hover:text-white"
               ><IconBase
                 classe="block w-auto h-8 text-white fill-current"
                 viewBox="0 0 20 20"
@@ -23,17 +23,17 @@
             <div class="flex">
               <LinkBase
                 href="#"
-                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                class="px-3 py-2 text-sm font-medium text-gray-100 rounded-md hover:bg-blue-800 hover:text-white"
                 >Personal Space</LinkBase
               >
               <LinkBase
                 href="#"
-                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                class="px-3 py-2 text-sm font-medium text-gray-100 rounded-md hover:bg-blue-800 hover:text-white"
                 >Orders</LinkBase
               >
               <LinkBase
                 href="#"
-                class="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
+                class="px-3 py-2 text-sm font-medium text-gray-100 rounded-md hover:bg-blue-800 hover:text-white"
                 >Discount</LinkBase
               >
             </div>
@@ -45,7 +45,7 @@
           <!-- Notification Menu -->
           <div class="relative ml-3">
             <button
-              class="flex p-1 text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+              class="flex p-1 text-gray-400 bg-blue-900 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-900 focus:ring-white"
               id="notification-menu"
               aria-haspopup="true"
               @click.prevent="(isNotif = !isNotif), (isOpen = false)"
@@ -119,7 +119,7 @@
           <!-- User Menu -->
           <div class="relative ml-3">
             <button
-              class="flex text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+              class="flex text-gray-400 bg-blue-900 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-800 focus:ring-white"
               id="user-menu"
               aria-haspopup="true"
               @click.prevent="(isOpen = !isOpen), (isNotif = false)"
