@@ -95,7 +95,7 @@
               </div>
               <div class="flex flex-row">
                 <div class="px-2">
-                  <IconBase viewBox="0 0 455.111 455.111" fill="#44C997"
+                  <IconBase viewBox="0 0 510.111 510.111" fill="#44C997"
                     ><circle
                       style="fill: #e24c4b"
                       cx="227.556"
