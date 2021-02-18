@@ -27,22 +27,12 @@
               </button>
             </div>
           </div>
-          <div class="hidden sm:block">
+          <div class="hidden sm:block" v-for="link in links" :key="link.id">
             <div class="flex">
               <LinkBase
-                href="#"
+                :href="link.to"
                 class="px-3 py-2 text-sm font-medium text-gray-100 rounded-md hover:bg-blue-600 hover:text-white"
-                >Personal Space</LinkBase
-              >
-              <LinkBase
-                href="#"
-                class="px-3 py-2 text-sm font-medium text-gray-100 rounded-md hover:bg-blue-600 hover:text-white"
-                >Orders</LinkBase
-              >
-              <LinkBase
-                href="#"
-                class="px-3 py-2 text-sm font-medium text-gray-100 rounded-md hover:bg-blue-600 hover:text-white"
-                >Discount</LinkBase
+                >{{ link.text }}</LinkBase
               >
             </div>
           </div>
@@ -173,22 +163,12 @@
       </div>
     </div>
     <div class="" v-if="isOpenMenu">
-      <div class="px-2 pt-2 pb-3 space-y-1">
+      <div class="pt-1 pb-2 space-y-1" v-for="link in links" :key="link.id">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <LinkBase
-          href="#"
-          class="block px-3 py-2 text-base font-medium text-gray-100 rounded-md hover:bg-blue-600 hover:text-white"
-          >Personal Space</LinkBase
-        >
-        <LinkBase
-          href="#"
-          class="block px-3 py-2 text-base font-medium text-gray-100 rounded-md hover:bg-blue-600 hover:text-white"
-          >Orders</LinkBase
-        >
-        <LinkBase
-          href="#"
-          class="block px-3 py-2 text-base font-medium text-gray-100 rounded-md hover:bg-blue-600 hover:text-white"
-          >Discount</LinkBase
+          :href="link.to"
+          class="block py-2 text-base font-medium text-gray-100 rounded-md hover:bg-blue-600 hover:text-white"
+          >{{ link.text }}</LinkBase
         >
       </div>
     </div>
@@ -207,6 +187,23 @@ export default {
       isOpen: false,
       isNotif: false,
       isOpenMenu: false,
+      links: [
+        {
+          id: 1,
+          to: "#",
+          text: "Personal Space",
+        },
+        {
+          id: 2,
+          to: "#",
+          text: "Orders",
+        },
+        {
+          id: 3,
+          to: "#",
+          text: "Discount",
+        },
+      ],
     };
   },
   methods: {
